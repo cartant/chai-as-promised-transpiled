@@ -1,0 +1,48 @@
+{
+  "author": "Nicholas Jamieson <nicholas@cartant.com>",
+  "bugs": {
+    "url": "https://github.com/cartant/chai-as-promised-transpiled/issues"
+  },
+  "dependencies": {
+    "check-error": "^1.0.2"
+  },
+  "description": "A re-distribution of a transpiled chai-as-promised (with typings)",
+  "devDependencies": {
+    "@types/chai-as-promised": "^0.0.31",
+    "babel-preset-es2015": "^6.24.0",
+    "babel-preset-es2016": "^6.24.0",
+    "babel-preset-es2017": "^6.24.0",
+    "babel-cli": "^6.24.0",
+    "chai-as-promised": "^7.0.0",
+    "mkdirp": "^0.5.1",
+    "rimraf": "^2.6.1"
+  },
+  "homepage": "https://github.com/cartant/chai-as-promised-transpiled",
+  "keywords": [
+    "chai",
+    "chai-as-promised"
+  ],
+  "license": "WTFPL",
+  "main": "./dist/index.js",
+  "name": "@cartant/chai-as-promised",
+  "optionalDependencies": {},
+  "peerDependencies": {
+    "chai": ">= 2.1.2 < 5"
+  },
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/cartant/chai-as-promised-transpiled.git"
+  },
+  "scripts": {
+    "dist": "npm run dist-pack && npm run dist-clean && npm run dist-babel && npm run dist-typings",
+    "dist-babel": "babel node_modules/chai-as-promised/lib/chai-as-promised.js --out-file dist/index.js",
+    "dist-clean": "rimraf dist && mkdirp dist",
+    "dist-pack": "node scripts/pack.js",
+    "dist-typings": "node scripts/typings.js",
+    "prepublishOnly": "npm run dist"
+  },
+  "typings": "./dist/index.d.ts",
+  "unpkg": "./dist/index.js",
+  "version": "0.0.0"
+}
