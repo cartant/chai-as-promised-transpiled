@@ -24,7 +24,7 @@
   ],
   "license": "WTFPL",
   "main": "./dist/index.js",
-  "name": "@cartant/chai-as-promised",
+  "name": "chai-as-promised-transpiled",
   "optionalDependencies": {},
   "peerDependencies": {
     "chai": ">= 2.1.2 < 5"
