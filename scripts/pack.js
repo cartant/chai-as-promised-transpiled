@@ -9,4 +9,4 @@ const content = Object.assign({}, transpiled, {
     dependencies: original.dependencies,
     peerDependencies: original.peerDependencies
 });
-fs.writeFileSync("./package.json", JSON.stringify(content, null, 2));
+fs.writeFileSync("./package.json", `${JSON.stringify(content, null, 2)}\n`);
