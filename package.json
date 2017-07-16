@@ -6,7 +6,7 @@
   "dependencies": {
     "check-error": "^1.0.2"
   },
-  "description": "A re-distribution of a transpiled chai-as-promised (with typings)",
+  "description": "A re-packaging of a transpiled chai-as-promised (with TypeScript declarations)",
   "devDependencies": {
     "@types/chai-as-promised": "^0.0.31",
     "babel-preset-es2015": "^6.24.0",
